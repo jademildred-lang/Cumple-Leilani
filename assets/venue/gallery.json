@@ -1,0 +1,10 @@
+{
+  "images": ["lugar1.jpg", "lugar2.jpg", "lugar3.jpg", "lugar4.jpg"],
+  "captions": {
+    "lugar1.jpg": "Decofest LyR en Palapa Jardin",
+    "lugar2.jpg": "Decofest LyR en Palapa Jardin",
+    "lugar3.jpg": "Decofest LyR en Palapa Jardin",
+    "lugar4.jpg": "Decofest LyR en Palapa Jardin"
+  }
+}
+

@@ -1,0 +1,8 @@
+{
+  "images": ["foto1.jpg", "foto2.jpg", "subcarpeta/foto3.jpg"],
+  "captions": {
+    "foto1.jpg": "Entrada del salón",
+    "foto2.jpg": "Área de mesas"
+  }
+}
+

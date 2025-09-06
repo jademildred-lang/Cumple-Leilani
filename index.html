@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Primer Año Leilani</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+  <!-- Imagen de portada para compartir -->
+  <meta property="og:title" content="¡Leilani cumple su primer año!">
+  <meta property="og:description" content="Acompáñanos a celebrar este día tan especial con Leilani 🐝">
+  <meta property="og:image" content="assets/cover/cover.jpg">
+  <meta property="og:type" content="website">
+</head>
+<body class="bg-yellow-50 font-sans">
+
+  <!-- Encabezado -->
+  <header class="bg-yellow-300 text-center py-6 shadow-lg">
+    <div class="flex justify-center items-center gap-2">
+      <img src="assets/icons/bee.svg" alt="Abejita" class="w-12 h-12">
+      <h1 class="text-3xl font-bold text-gray-800">¡Leilani cumple su primer año! 🐝</h1>
+    </div>
+    <p class="mt-2 text-gray-700">
+      Con mucho cariño, sus papás <b>Elideh Jazmin y Leonardo</b> y sus padrinos <b>Luisa y Rodrigo</b> te invitan a esta gran celebración.
+    </p>
+  </header>
+
+  <!-- Banner con video -->
+  <section class="relative bg-yellow-200 text-center py-6">
+    <video id="heroVideo" src="assets/video/abejita.mp4" poster="assets/video/poster.jpg" muted playsinline loop controls class="mx-auto rounded-xl shadow-md max-h-96"></video>
+  </section>
+
+  <!-- Cuenta regresiva -->
+  <section class="text-center py-8 bg-white">
+    <h2 class="text-2xl font-semibold text-gray-800">Cuenta regresiva para la gran fiesta 🎉</h2>
+    <div id="countdown" class="text-3xl font-bold text-yellow-600 mt-4"></div>
+  </section>
+
+  <!-- Dirección -->
+  <section class="bg-yellow-100 text-center py-8">
+    <h2 class="text-2xl font-semibold text-gray-800">Lugar del evento 📍</h2>
+    <p class="mt-2 text-gray-700">
+      Palapa Jardín Buena Vista Río Tonto, SJB Tuxtepec, Oaxaca
+    </p>
+    <a href="https://maps.app.goo.gl/zQUTiCitfNivsAHH9" target="_blank" class="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">
+      Ver en Google Maps
+    </a>
+  </section>
+
+  <!-- Confirmación -->
+  <section class="text-center py-8 bg-white">
+    <h2 class="text-2xl font-semibold text-gray-800">Confirma tu asistencia 💌</h2>
+    <a href="https://wa.me/5212871424065?text=Hola! Confirmo mi asistencia al cumple de Leilani 🐝" target="_blank"
+       class="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">
+      Confirmar por WhatsApp
+    </a>
+  </section>
+
+  <!-- Galerías -->
+  <section class="py-8 bg-yellow-50">
+    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Galería del lugar 📸</h2>
+    <div id="venueGallery" class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4"></div>
+  </section>
+
+  <section class="py-8 bg-white">
+    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Galería de Leilani 🐝</h2>
+    <div id="leilaniGallery" class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4"></div>
+  </section>
+
+  <section class="py-8 bg-yellow-50">
+    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Preparativos ✨</h2>
+    <div id="prepGallery" class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4"></div>
+  </section>
+
+  <!-- Frase final -->
+  <section class="text-center py-8 bg-yellow-200">
+    <p class="text-xl font-semibold text-gray-800">“Gracias por ser parte de esta dulce aventura 🐝💛”</p>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+    <button id="closeLightbox" class="absolute top-4 right-4 text-white text-3xl">✕</button>
+    <button id="prevImage" class="absolute left-4 text-white text-3xl">❮</button>
+    <img id="lightboxImage" src="" alt="Imagen" class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg">
+    <button id="nextImage" class="absolute right-4 text-white text-3xl">❯</button>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // ====== Cuenta regresiva ======
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("2025-09-28T14:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "🎉 ¡Ya empezó la fiesta! 🎉";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    // ====== Lightbox ======
+    let currentGallery = [];
+    let currentIndex = 0;
+
+    function openLightbox(images, index) {
+      currentGallery = images;
+      currentIndex = index;
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      lightboxImage.src = currentGallery[currentIndex];
+      lightbox.classList.remove("hidden");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.add("hidden");
+    }
+
+    function showNext() {
+      currentIndex = (currentIndex + 1) % currentGallery.length;
+      document.getElementById("lightboxImage").src = currentGallery[currentIndex];
+    }
+
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+      document.getElementById("lightboxImage").src = currentGallery[currentIndex];
+    }
+
+    document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
+    document.getElementById("nextImage").addEventListener("click", showNext);
+    document.getElementById("prevImage").addEventListener("click", showPrev);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+    });
+
+    // ====== Cargar galerías ======
+    async function loadGallery(folder, containerId) {
+      try {
+        const response = await fetch(`assets/${folder}/gallery.json`);
+        const data = await response.json();
+
+        const container = document.getElementById(containerId);
+        container.innerHTML = "";
+
+        data.images.forEach((img, index) => {
+          const imgEl = document.createElement("img");
+          imgEl.src = `assets/${folder}/${img}`;
+          imgEl.alt = data.captions[img] || "";
+          imgEl.className = "w-full h-40 object-cover rounded-lg shadow cursor-pointer hover:scale-105 transform transition";
+          imgEl.addEventListener("click", () => {
+            openLightbox(data.images.map(i => `assets/${folder}/${i}`), index);
+          });
+          container.appendChild(imgEl);
+        });
+      } catch (e) {
+        console.error("Error al cargar galería", folder, e);
+      }
+    }
+
+    loadGallery("venue", "venueGallery");
+    loadGallery("leilani", "leilaniGallery");
+    loadGallery("prep", "prepGallery");
+  </script>
+</body>
+</html>
+
