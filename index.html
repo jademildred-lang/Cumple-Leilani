@@ -41,9 +41,31 @@
   </header>
 
   <!-- Banner con video --> 
-  <section class="relative bg-yellow-200 text-center py-6"> 
-    <video id="heroVideo" src="assets/video/abejita.mp4" poster="assets/video/poster.jpg" muted playsinline loop controls class="mx-auto rounded-xl shadow-md max-h-96"></video> 
-  </section>
+<section class="relative bg-yellow-200 text-center py-6"> 
+  <video id="heroVideo" 
+         src="assets/video/abejita.mp4" 
+         poster="assets/video/poster.jpg" 
+         muted 
+         autoplay 
+         playsinline 
+         loop 
+         controls 
+         class="mx-auto rounded-xl shadow-md max-h-96">
+  </video>
+</section>
+
+<script>
+  const video = document.getElementById('heroVideo');
+  video.volume = 0.5; // volumen inicial al 50%
+
+  // Al hacer clic en el video, quitar mute y subir volumen
+  video.addEventListener("click", () => {
+    video.muted = false;
+    video.volume = 0.5;
+    video.play();
+  });
+</script>
+
 
   <!-- Cuenta regresiva -->
   <section class="text-center py-8 bg-white">
