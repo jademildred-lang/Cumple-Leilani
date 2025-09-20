@@ -1,10 +1,14 @@
 {
-  "images": ["IMG_20250920_121206539.jpg", "IMG_20250920_121227955.jpg", "IMG_20250920_121301589.jpg", "IMG_20250920_121317618.jpg", ],
+  "images": [
+    "IMG_20250920_121206539.jpg",
+    "IMG_20250920_121227955.jpg",
+    "IMG_20250920_121301589.jpg",
+    "IMG_20250920_121317618.jpg"
+  ],
   "captions": {
-    "IMG_20250920_121206539.jpg": "Zapatos de Leilani color rosa como parte de los preparativos.",
-    "IMG_20250920_121227955.jpg": "Frascos con miel decorados con betún de colores y pequeños adornos, listos para la celebración.",
-    "IMG_20250920_121301589.jpg": "Un frasco con miel decorado con listón rosa y blanco, como recuerdo de la fiesta.",
-    "IMG_20250920_121317618.jpg": "Recuerdos o regalos para los invitados.",
-    
+    "IMG_20250920_121206539.jpg": "Zapatos de bebé color rosa con detalles blancos, acomodados en una charola como parte de los preparativos.",
+    "IMG_20250920_121227955.jpg": "Charola con cupcakes decorados con betún de colores y pequeños adornos, listos para la celebración.",
+    "IMG_20250920_121301589.jpg": "Un frasco decorado con listón rosa y blanco, posiblemente usado como centro de mesa o recuerdo de la fiesta.",
+    "IMG_20250920_121317618.jpg": "Una canasta envuelta con celofán transparente, adornada con listón, que parece contener recuerdos o regalos para los invitados."
   }
 }
