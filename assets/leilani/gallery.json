@@ -1,8 +1,7 @@
 {
-  "images": ["foto1.jpg", "foto2.jpg", "subcarpeta/foto3.jpg"],
+  "images": ["Leilani recien nacida.jpeg", "Leilani de un mes.jpeg", "Leilani de un mes_01.png", "Leilani de dos meses.png", "Leilani de dos meses_02.png" "Leilani de dos meses_02", "Leilani de tres meses.jpeg", "Leilani de tres meses_02.png", "Leilani de cuatro meses.jpeg", "Leilani de cuatro meses_02.jpeg", "Leilani de cinco meses.png", "Leilani de cinco meses_02.jpg", "Leilani de seis meses.jpeg", "Leilani de siete meses.jpeg", "Leilani de ocho meses.jepg", "Leilani de nueve meses.jpg", "Leilani de nueve meses_02.jpg", "Leilani de diez meses.jpg", "Leilani de diez meses_02.jpg", "Leilani de diez meses_03.jpg", "leilani de once meses.jpeg", "Leilani de once meses_02.jpeg" ],
   "captions": {
     "foto1.jpg": "Entrada del salón",
     "foto2.jpg": "Área de mesas"
   }
 }
-
