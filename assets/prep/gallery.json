@@ -1,10 +1,5 @@
 {
-  "images": [
-    "IMG_20250920_121206539.jpg",
-    "IMG_20250920_121227955.jpg",
-    "IMG_20250920_121301589.jpg",
-    "IMG_20250920_121317618.jpg",
-  ],
+  "images": ["IMG_20250920_121206539.jpg", "IMG_20250920_121227955.jpg", "IMG_20250920_121301589.jpg", "IMG_20250920_121317618.jpg", ],
   "captions": {
     "IMG_20250920_121206539.jpg": "Zapatos de Leilani color rosa como parte de los preparativos.",
     "IMG_20250920_121227955.jpg": "Frascos con miel decorados con betún de colores y pequeños adornos, listos para la celebración.",
