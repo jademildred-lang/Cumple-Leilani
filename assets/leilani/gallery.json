@@ -8,7 +8,7 @@
     "Leilani de dos meses_03.png",
     "Leilani dia de muertos_01.png",
     "Leilani dia de muertos_02.png",
-    "Leilani dia de muertos_03.png"
+    "Leilani dia de muertos_03.png",
     "Leilani de tres meses.jpeg",
     "Leilani de tres meses_02.png",
     "Leilani de cuatro meses.jpeg",
@@ -25,13 +25,13 @@
     "Leilani de diez meses_02.jpg",
     "Leilani de diez meses_03.jpg",
     "Leilani de once meses.jpeg",
-    "Leilani de once meses_02.jpeg",
-    ],
+    "Leilani de once meses_02.jpeg"
+  ],
   "captions": {
     "Leilani recien nacida.jpeg": "Recién nacida",
     "Leilani de un mes.jpeg": "Un mes",
     "Leilani de dos meses.png": "Dos meses",
-    "Leilani dia de muertos_01.png": "Día de Muertos"
+    "Leilani dia de muertos_01.png": "Día de Muertos",
     "Leilani de tres meses.jpeg": "Tres meses",
     "Leilani de cuatro meses.jpeg": "Cuatro meses",
     "Leilani de cinco meses.png": "Cinco meses",
@@ -40,6 +40,6 @@
     "Leilani de ocho meses.jpeg": "Ocho meses",
     "Leilani de nueve meses.jpg": "Nueve meses",
     "Leilani de diez meses.jpg": "Diez meses",
-    "Leilani de once meses.jpeg": "Once meses",
+    "Leilani de once meses.jpeg": "Once meses"
   }
 }
