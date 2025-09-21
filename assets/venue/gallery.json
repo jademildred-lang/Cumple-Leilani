@@ -1,10 +1,20 @@
 {
-  "images": ["lugar1.jpg", "lugar2.jpg", "lugar3.jpg", "lugar4.jpg"],
+  "images": [
+    "475310199-9330734689426464339253966528701402_n.jpg",
+    "481082588-9549335167566416673602293260754655_n.jpg",
+    "481475702-9573529831813616031977470842243793_n.jpg",
+    "481672499-9573530698480191107089561403630019_n.jpg",
+    "lugar1.jpg",
+    "lugar3.jpg",
+    "lugar4.jpg"
+  ],
   "captions": {
+    "475310199-9330734689426464339253966528701402_n.jpg": "Decofest LyR en Palapa Jardin",
+    "481082588-9549335167566416673602293260754655_n.jpg": "Decofest LyR en Palapa Jardin",
+    "481475702-9573529831813616031977470842243793_n.jpg": "Decofest LyR en Palapa Jardin",
+    "481672499-9573530698480191107089561403630019_n.jpg": "Decofest LyR en Palapa Jardin",
     "lugar1.jpg": "Decofest LyR en Palapa Jardin",
-    "lugar2.jpg": "Decofest LyR en Palapa Jardin",
     "lugar3.jpg": "Decofest LyR en Palapa Jardin",
     "lugar4.jpg": "Decofest LyR en Palapa Jardin"
   }
 }
-
